@@ -4,9 +4,12 @@ export default function Jeu() {
     const [bois, setBois] = useState(0);
     const [fibres, setFibres] = useState(0);
     const [pierres, setPierres] = useState(0);
+    const [boisRecoltesJour, setBoisRecoltesJour] = useState(0);
 
     function recolterBois() {
+        if (boisRecoltesJour >= 4) { return; }
         setBois(quantitePrecedente => quantitePrecedente + 1);
+        setBoisRecoltesJour(quantitePrecedente => quantitePrecedente + 1);
     }
     return (
         <div>
