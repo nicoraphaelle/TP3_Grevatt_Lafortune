@@ -4,6 +4,10 @@ export default function Jeu() {
     const [bois, setBois] = useState(0);
     const [fibres, setFibres] = useState(0);
     const [pierres, setPierres] = useState(0);
+
+    function recolterBois() {
+        setBois(quantitePrecedente => quantitePrecedente + 1);
+    }
     return (
         <div>
             <h1>Une nouvelle vie sur l'île</h1>
@@ -14,6 +18,7 @@ export default function Jeu() {
                 <li>Fibres {fibres}</li>
                 <li>Pierres {pierres}</li>
             </ul>
+            <button onClick={recolterBois}>Récolter du bois</button>
         </div>
     );
 }
