@@ -21,7 +21,7 @@ export default function Jeu() {
                 <li>Fibres {fibres}</li>
                 <li>Pierres {pierres}</li>
             </ul>
-            <button onClick={recolterBois}>Récolter du bois</button>
+            <button onClick={recolterBois} disabled={boisRecoltesJour >= 4}>Récolter du bois</button>
         </div>
     );
 }
