@@ -4,7 +4,7 @@ import './index.css'
 
 import { BrowserRouter, Route, Routes } from 'react-router'
 import App from './App.jsx'
-import Abri from './Abri.jsx'
+import Abri from './Abri.jsx' //import pour avoir la page "Abri" (nico)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
